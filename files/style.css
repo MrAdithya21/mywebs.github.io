@@ -188,26 +188,17 @@ body {
 
 .about {
     background-color: black;
-    display: grid;
-    grid-template-columns: repeat(2, .5fr);
-    /*align-items: center;*/
-    /*gap: 1.5rem;*/
+    display: flex; /* Changed to flex for better alignment control */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
     width: 100%;
-    justify-content: space-between;
     min-height: 100vh;
-    padding: 70px 5% 0;
+    padding: 70px 5%;
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center; /* Center text */
 }
 
-.about-img {
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    padding-right: 10%;
-    margin-top: 2.5%;
-    /*margin-top: 7.5%;*/
-    opacity: 1;
-}
+/* Removed the about-img since it's not needed anymore */
 
 .abt-res {
     width: 100%;
@@ -215,49 +206,107 @@ body {
     max-width: 492px;
     max-height: 492px;
     border-radius: 90px;
-    /*box-shadow: 0 0 5pc cyan, 0 0 5px cyan, 0 0 10px cyan;*/
     border: #0ef 5px solid;
+    animation: glow 2s infinite alternate; /* Add a glowing animation */
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px #0ef, 0 0 20px #0ef, 0 0 30px #0ef;
+    }
+    100% {
+        box-shadow: 0 0 20px #0ef, 0 0 30px #0ef, 0 0 40px #0ef;
+    }
 }
 
 .about-text {
-    margin-right: 2%;
+    max-width: 800px; /* Ensure content doesn't stretch too wide */
+    padding: 0 20px;
+    margin-top: 20px;
 }
 
 .about-text h2 {
-    font-size: 60px;
+    font-size: 3.5rem;
     letter-spacing: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .about-text h2 span {
     color: #0ef;
+    position: relative;
+    display: inline-block;
+    animation: bounce 2s infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
 }
 
 .about-text p {
     color: aliceblue;
-    font-size: 20px;
-    line-height: 2;
+    font-size: 1.2rem;
+    line-height: 1.8;
     letter-spacing: 2px;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     text-align: justify;
     text-justify: inter-word;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .abtbtn-box {
     display: inline-block;
-    padding: 12px 28px;
+    padding: 14px 30px;
     background: #0ef;
-    border-radius: 40px;
-    font-size: 15px;
+    border-radius: 50px;
+    font-size: 1rem;
     text-align: center;
     color: #081b29;
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
+    transition: all 0.3s ease;
+    animation: fadeIn 2.5s ease-in-out;
 }
 
 .abtbtn-box:hover {
-    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50pc cyan, 0 0 100px cyan, 0 0 200px cyan;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #0ef, 0 0 30px #0ef, 0 0 45px #0ef, 0 0 60px #0ef;
+    background-color: #fff;
+    color: #000;
 }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 
 /* Skills */
