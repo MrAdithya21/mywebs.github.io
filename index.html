@@ -6,28 +6,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
         <link rel="shortcut icon" type="image/png" href="ic.png">
-        <link rel="stylesheet" href='./files/style.css'>
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="./files/style.css">
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
         <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        
     </head>
     <body>
-        
+        <!-- Three.js Canvas -->
+        <canvas id="bg"></canvas>
+
+        <!-- Header -->
         <header class="header">
-            <a href="#" class="logo">Portfolio</a>
-            <nav class="navbar" id="myLinks">
-                <a href="#Home" style="--i:1" class="active" >Home</a>
+            <a href="#" class="logo">
+                <img src="/Users/adithyasingupati/Downloads/mywebs.github.io-main/img/image.png" alt="Adithya Logo" class="logo-img">
+            </a>
+                        <nav class="navbar" id="myLinks">
+                <a href="#Home" style="--i:1" class="active">Home</a>
                 <a href="#About" style="--i:2">About</a>
                 <a href="#Skills" style="--i:3">Skills</a>
                 <a href="#Projects" style="--i:4">Projects</a>
-                <a href="#Contact" style="--i:5">Contact</a>
+                <a href="#Dashboards" style="--i:5">Dashboards</a>
+                <a href="#Experience" style="--i:5">Experience</a>
+                <a href="#Contact" style="--i:6">Contact</a>
             </nav>
         </header>
 
+        <!-- Home Section -->
         <section class="home" id="Home">
-            <div class="home-content">
-                <h3>Hello, It's Me</h3>
+            <div class="home-content" >
+                <h3>Hello, It's Me <span class="wave-hand" aria-label="Waving Hand">👋</span></h3>
                 <h1>Adithya Singupati</h1>
-                <h4 style="--i:6">I'm a Masters student who is<br>
+                <h4 style="--i:6">I'm a Master's student who is<br>
                     passionate in <span class="text"></span></h4>
                 
                 <div class="img">
@@ -37,250 +47,351 @@
                 <div class="home-sci">
                     <a href="https://www.linkedin.com/in/adithyasingupati" style="--i:7" target="_blank"><i class='bx bxl-linkedin'></i></a>
                     <a href="https://github.com/MrAdithya21" style="--i:10" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="https://public.tableau.com/app/profile/adithya.singupati/vizzes" style="--i:13" target="_blank"> <i class='bx bx-bar-chart-square'></i>
+                    </a> 
                 </div>
                 
                 <a href="https://drive.google.com/file/d/1jDrrLYheJAq6s0n5nMc9pl_RcqLI3ipS/view?usp=drive_link" style="--i:11" class="btn-box" target="_blank">Download Resume</a>
             </div>
         </section>
 
-        <section>
-            <div class="about" id="About">
-                <div class="about-text" style="text-align: center; max-width: 800px; margin: 0 auto;">
-                    <h2>About <span>Me</span></h2>
-                    <p>
-                        🎓 Greetings! I'm Adithya Singupati, your friendly neighborhood Data Science enthusiast currently leveling up at Indiana University Bloomington, where I'm pursuing a Master's in Data Science. Armed with a Bachelor's degree in Computer Science and Engineering and a knack for turning data into insights, I've mastered the art of Python, Java, R, and SQL, among others.
-                    </p>
-                    <p>
-                        🚀 Throughout my journey, I've taken on some epic quests—like building a Python-based tool for energy market analysis that practically does the thinking for you, or creating a YOLOv4-powered blind assistance system that could spot a needle in a haystack (well, almost). I even crafted a voice-controlled home automation system because, let's face it, who doesn't want to feel like they're living in the future?
-                    </p>
-                    <p>
-                        🦸 My internship at TIH IoT Chanakya, IIT Bombay, was nothing short of an adventure. I helped bring to life a speech and mind-controlled wheelchair that's so responsive, it's practically telepathic. This experience solidified my passion for using technology to make a real difference in people's lives.
-                    </p>
-                    <p>
-                        🎯 My mission? To continue harnessing the power of data and technology to create solutions that drive meaningful decisions and spark innovation. Whether it's crunching numbers, developing models, or just making cool stuff, I'm all in.
-                    </p>
-                    <br><br>
-                    <a href="https://drive.google.com/file/d/1jDrrLYheJAq6s0n5nMc9pl_RcqLI3ipS/view?usp=drive_link" style="--i:11" class="abtbtn-box" target="_blank">Download Resume</a>
+        <!-- About Section -->
+<!-- About Section -->
+<section class="about" id="About">
+    <div class="about-container">
+        <!-- About Text Section -->
+        <div class="about-text animate-from-left">
+            <h2>About <span>Me</span></h2>
+            <p>
+                🌟 "Data isn’t just numbers; it’s the story behind the numbers." Hi, I’m Adithya Singupati, a Data Science enthusiast who loves turning raw data into meaningful insights. Currently pursuing my Master's at Indiana University Bloomington, I specialize in Machine Learning, Data Visualization, and solving the eternal mystery of "Why doesn’t this code work?"
+            </p>
+            <p>
+                🚀 I’ve built a YOLO-powered Blind Assistance System (bringing vision to machines), a voice-controlled home automation setup (because switches are overrated), and energy analysis tools that help make grids smarter. My toolkit includes Python, SQL, Tableau, and an unshakeable love for problem-solving.
+            </p>
+            <p>
+                ✨ Outside the world of data, I’m a movie enthusiast, an adventurous traveler, and an experimental chef (my cooking has only crashed a few times). Let’s connect to transform challenges into innovative solutions—preferably with a good cup of coffee in hand.
+            </p>
+            <a href="https://drive.google.com/file/d/1jDrrLYheJAq6s0n5nMc9pl_RcqLI3ipS/view?usp=drive_link" class="abtbtn-box" target="_blank">Download Resume</a>
+        </div>
+
+        <!-- About Image Section -->
+        <div class="about-image animate-from-right">
+            <img src="./img/pngtree-cartoon-boy.png" alt="Illustration" />
+        </div>
+    </div>
+</section>
+
+      
+        
+
+<section id="Skills">
+    <div class="skills-container">
+        <h2 class="animate-from-top">My <span>Skills</span></h2>
+
+        <!-- General Skills -->
+        <div class="skills-grid">
+            <div class="skill-block animate-from-left">
+                <i class='bx bxl-python'></i>
+                <h3>Python</h3>
+            </div>
+            <div class="skill-block animate-from-right">
+                <i class='bx bxs-data'></i>
+                <h3>SQL</h3>
+            </div>
+            <div class="skill-block animate-from-left">
+                <i class='bx bxs-registered'></i>
+                <h3>R</h3>
+            </div>
+            <div class="skill-block animate-from-right">
+                <i class='bx bxl-java'></i>
+                <h3>Java</h3>
+            </div>
+            <div class="skill-block animate-from-left">
+                <i class='bx bxl-c-plus-plus'></i>
+                <h3>C++</h3>
+            </div>
+            <div class="skill-block animate-from-right">
+                <i class='bx bxl-html5'></i>
+                <h3>HTML</h3>
+            </div>
+            <div class="skill-block animate-from-left">
+                <i class='bx bxl-css3'></i>
+                <h3>CSS</h3>
+            </div>
+            <div class="skill-block animate-from-right">
+                <i class='bx bx-bar-chart-square'></i>
+                <h3>Tableau</h3>
+            </div>
+            <div class="skill-block animate-from-left">
+                <i class='bx bx-pie-chart-alt-2'></i>
+                <h3>Power BI</h3>
+            </div>
+            <div class="skill-block animate-from-right">
+                <i class='bx bxl-javascript'></i>
+                <h3>JavaScript</h3>
+            </div>
+            <div class="skill-block animate-from-left">
+                <i class='bx bxl-react'></i>
+                <h3>React.js</h3>
+            </div>
+            <div class="skill-block animate-from-right">
+                <i class='bx bxl-mongodb'></i>
+                <h3>MongoDB</h3>
+            </div>
+            <div class="skill-block animate-from-left">
+                <i class='bx bxl-git'></i>
+                <h3>Git</h3>
+            </div>
+            <div class="skill-block animate-from-right">
+                <i class='bx bxl-postgresql'></i>
+                <h3>PostgreSQL</h3>
+            </div>
+            <div class="skill-block animate-from-left">
+                <i class='bx bxl-microsoft'></i>
+                <h3>MS Azure</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+        
+                   
+<section id="ProfessionalSkills">
+    <div class="skills_cert">
+        <div class="container2 professional-animate-left">
+            <h3>Professional <span>Skills</span></h3>
+            <div class="radial-bars">
+                <div class="radial-bar professional-animate-scale">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="80" r="80"></circle>
+                        <circle class="path path-1" cx="100" cy="80" r="80"></circle>
+                    </svg>
+                    <div class="percentage">60%</div>
+                    <div class="text">Problem Solving</div>
+                </div>
+
+                <div class="radial-bar professional-animate-scale">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="80" r="80"></circle>
+                        <circle class="path path-2" cx="100" cy="80" r="80"></circle>
+                    </svg>
+                    <div class="percentage">70%</div>
+                    <div class="text">Creativity</div>
+                </div>
+
+                <div class="radial-bar professional-animate-scale">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="80" r="80"></circle>
+                        <circle class="path path-3" cx="100" cy="80" r="80"></circle>
+                    </svg>
+                    <div class="percentage">80%</div>
+                    <div class="text">Communication</div>
+                </div>
+
+                <div class="radial-bar professional-animate-scale">
+                    <svg x="0px" y="0px" viewBox="0 0 200 200">
+                        <circle class="progress-bar" cx="100" cy="80" r="80"></circle>
+                        <circle class="path path-4" cx="100" cy="80" r="80"></circle>
+                    </svg>
+                    <div class="percentage">90%</div>
+                    <div class="text">Teamwork</div>
                 </div>
             </div>
-        </section>
-        
-        
-        
-
-        <section id="Skills">
-            <h1 class="subtitle">My <span>Skills</span></h1>
-            <div class="sec">
-                <div class="container1">
-                    <h1 class="heading1">Technical Skills</h1>
-                    <div class="Technical-bars">
-                        <div class="bar"><i class='bx bxl-python' style="color: #b0bc1e;"></i>
-                            <div class="info">
-                                <span>Python <span class="addpy"></span></span>
-                            </div>
-                            <div class="progress-line python">
-                                <span></span>
-                            </div>
-                        </div>
-
-                        <div class="bar">
-                            <i class='bx bxs-data' style="color: #F29111;"></i>
-                            <div class="info">
-                                <span>SQL <span class="addsql"></span></span>
-                            </div>
-                            <div class="progress-line sql">
-                                <span></span>
-                            </div>
-                        </div>
-
-                        <div class="bar">
-                            <i class='bx bxs-registered' style="color: #1D9BF0;"></i>
-                            <div class="info">
-                                <span>R <span class="addr"></span></span>
-                            </div>
-                            <div class="progress-line r">
-                                <span></span>
-                            </div>
-                        </div>
-
-                        <div class="bar"><i class='bx bxl-java' style="color: #c95d2e;"></i>
-                            <div class="info">
-                                <span>Java <span class="addjava"></span></span>
-                            </div>
-                            <div class="progress-line java">
-                                <span></span>
-                            </div>
-                        </div>
-
-                        <div class="bar"><i class='bx bxl-c-plus-plus'style="color: #3db2fc;"></i>
-                            <div class="info">
-                                <span>C/C++ <span class="addc"></span></span>
-                            </div>
-                            <div class="progress-line cpls">
-                                <span></span>
-                            </div>
-                        </div>
-
-                        <div class="bar"><i class='bx bxl-html5' style="color: #c9332e;"></i>
-                            <div class="info">
-                                <span>HTML <span class="addhtml"></span></span>
-                            </div>
-                            <div class="progress-line html">
-                                <span></span>
-                            </div>
-                        </div>
-
-                        <div class="bar"><i class='bx bxl-css3' style="color: #147bbc;"></i>
-                            <div class="info">
-                                <span>CSS <span class="addcss"></span></span>
-                            </div>
-                            <div class="progress-line css">
-                                <span></span>
-                            </div>
-                        </div>                                                
-                    </div>
+        </div>
+        <div class="certifications-section professional-animate-right">
+            <h3>Certifications</h3>
+            <div class="certifications">
+                <div class="cert-item">
+                    <img src="img/Top_SQL_50.png" alt="SQL Certification" />
+                    <p>SQL Certification</p>
                 </div>
-
-                <div class="container2">
-                    <h1 class="heading1">Professional Skills</h1>
-                    <div class="radial-bars">
-                        <div class="radial-bar">
-                            <svg x="0px" y="0px" viewBox="0 0 200 200">
-                                <circle class="progress-bar" cx="100" cy="80" r="80"></circle>
-                                <circle class="path path-1" cx="100" cy="80" r="80"></circle>
-                            </svg>
-                            <div class="percentage">60%</div>
-                            <div class="text">Problem Solving</div>
-                        </div>
-
-                        <div class="radial-bar">
-                            <svg x="0px" y="0px" viewBox="0 0 200 200">
-                                <circle class="progress-bar" cx="100" cy="80" r="80"></circle>
-                                <circle class="path path-2" cx="100" cy="80" r="80"></circle>
-                            </svg>
-                            <div class="percentage">70%</div>
-                            <div class="text">Creativity</div>
-                        </div>
-
-                        <div class="radial-bar">
-                            <svg x="0px" y="0px" viewBox="0 0 200 200">
-                                <circle class="progress-bar" cx="100" cy="80" r="80"></circle>
-                                <circle class="path path-3" cx="100" cy="80" r="80"></circle>
-                            </svg>
-                            <div class="percentage">80%</div>
-                            <div class="text">Communication</div>
-                        </div>
-
-                        <div class="radial-bar">
-                            <svg x="0px" y="0px" viewBox="0 0 200 200">
-                                <circle class="progress-bar" cx="100" cy="80" r="80"></circle>
-                                <circle class="path path-4" cx="100" cy="80" r="80"></circle>
-                            </svg>
-                            <div class="percentage">90%</div>
-                            <div class="text">Teamwork</div>
-                        </div>
-                    </div>
+                <div class="cert-item">
+                    <img src="img/aws-certified-cloud-practitioner.png" alt="AWS Cloud Practitioner" />
+                    <p>AWS Cloud Practitioner</p>
+                </div>
+                <div class="cert-item">
+                    <img src="img/tableau-desktop-specialist.png" alt="Tableau Specialist" />
+                    <p>Tableau Specialist</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-        <section id="Projects">
-            <div id="portfolio" class="services">
-                <div class="main-text" id="serv">
-                    <h2>My <span>Projects</span></h2>
-                    <div class="serv-container">
-                        <div class="row">
-                            <img src="./img/blind2.png">
-                            <div class="layer">
-                                <h5>Blind Assistance System</h5>
-                                <p>Utilized the YOLOv4 algorithm for an object detection system that improves navigational aid for visually impaired users.</p>
-                                <a href="https://github.com/MrAdithya21/Blind-Assistance-System"><i class='bx bxs-low-vision' style="color: aliceblue;"></i></a>
-                            </div>
-                        </div>
+        
+        
 
-                        <div class="row">
-                            <img src="./img/vs.png">
-                            <div class="layer">
-                                <h5>Multifunctional Virtual Assistant using Wakeup Word</h5>
-                                <p>A voice-command virtual assistant designed to streamline system navigation and routine tasks for enhanced user interaction.</p>
-                                <a href="#"><i class='bx bx-desktop' style="color: aliceblue;"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <img src="./img/sh.png">
-                            <div class="layer">
-                                <h5>Home Automation System</h5>
-                                <p>An IoT-based voice-controlled automation system created to improve the living experience of bedridden patients by enabling efficient home environment control.</p>
-                                <a href="#"><i class='bx bxs-store-alt' style="color: aliceblue;"></i></a>
-                            </div>
-                        </div>
+<section id="Projects">
+    <div id="portfolio" class="services">
+        <div class="main-text" id="serv">
+            <h2 class="project-animate-pop">My <span>Projects</span></h2>
+            <div class="serv-container">
+                <div class="row project-animate-pop">
+                    <img src="./img/blind2.png">
+                    <div class="layer">
+                        <h5>Blind Assistance System</h5>
+                        <a href="https://github.com/MrAdithya21/Blind-Assistance-System">
+                            <i class='bx bxs-low-vision' style="color: aliceblue;"></i>
+                        </a>
                     </div>
+                </div>
 
-                    <div class="serv-container">
-                        <div class="row">
-                            <img src="./img/isi1.png">
-                            <div class="layer">
-                                <h5>Iris Classification using Vision Transformers</h5>
-                                <p>Integrated Vision Transformers for advanced Iris Classification, supported by comprehensive data analysis with Power BI and Tableau.</p>
-                                <a href="#"><i class='bx bx-show' style="color: aliceblue;"></i></a>
-                            </div>
-                        </div>
+                <div class="row project-animate-pop">
+                    <img src="./img/vs.png">
+                    <div class="layer">
+                        <h5>Multifunctional Virtual Assistant using Wakeup Word</h5>
+                        <a href="https://github.com/MrAdithya21/Virtual-Assistant">
+                            <i class='bx bx-desktop' style="color: aliceblue;"></i>
+                        </a>
+                    </div>
+                </div>
 
-                        <div class="row">
-                            <img src="./img/retail3.png">
-                            <div class="layer">
-                                <h5>Database Management System for Retail Inventory</h5>
-                                <p>Orchestrated a SQL-based database for retail inventory management, optimizing various operational processes for retail enterprises.</p>
-                                <a href="#"><i class='bx bx-dollar' style="color: aliceblue;"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <img src="./img/ana.png">
-                            <div class="layer">
-                                <h5>Energy Market Analysis Tool</h5>
-                                <p>Developed with Python and machine learning to forecast energy market trends, significantly enhancing predictive decision-making capabilities.</p>
-                                <a href="#"><i class='bx bx-bar-chart-square' style="color: aliceblue;"></i></a>
-                            </div>
-                        </div>
+                <div class="row project-animate-pop">
+                    <img src="./img/sh.png">
+                    <div class="layer">
+                        <h5>Home Automation System</h5>
+                        <a href="#"><i class='bx bxs-store-alt' style="color: aliceblue;"></i></a>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section id="Experience">
-            <div class="project">
-                <div class="container">
-                    <h1 class="sub-title">My <span>Experience</span></h1>
-                    <div class="prj-list">
-                        <!-- TIH-IoT Chanakya Experience -->
-                        <div>
-                            <i class='bx bx-code' style="color: #00eeff;"></i>
-                            <h2 style="color: #00eeff;">Intern at TIH-IoT Chanakya (IIT Bombay)</h2>
-                            <p>
-                                During my internship at TIH-IoT Chanakya, IIT Bombay, I was involved in the development of innovative control systems designed to enhance accessibility and mobility for individuals with disabilities. I worked on integrating speech and mind-controlled systems into wheelchair technology, which significantly improved the user experience. My primary focus was on developing a speech control system using Arduino Uno microcontrollers and HC05 Bluetooth modules, which translated user commands into actionable digital signals.
-                                
-                                I also contributed to the development of a mind-controlled wheelchair system, using L293D motor drivers to translate cognitive commands into precise movements. This project not only honed my programming skills but also deepened my understanding of hardware integration and user-centric design. Working closely with a team of skilled professionals, I was able to contribute to creating a wheelchair that was not only technologically advanced but also intuitive and adaptable to the varied needs of its users.
-                            </p>
-                        </div>
+            <div class="serv-container">
+                <div class="row project-animate-pop">
+                    <img src="./img/isi1.png">
+                    <div class="layer">
+                        <h5>Iris Classification using Vision Transformers</h5>
+                        <a href="https://github.com/MrAdithya21/Iris-Classification-Using-Vision-Transformer">
+                            <i class='bx bx-show' style="color: aliceblue;"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row project-animate-pop">
+                    <img src="./img/retail3.png">
+                    <div class="layer">
+                        <h5>Database Management System for Retail Inventory</h5>
+                        <a href="https://github.com/MrAdithya21/Database-Management-System-for-Retail-Inventory">
+                            <i class='bx bx-dollar' style="color: aliceblue;"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row project-animate-pop">
+                    <img src="./img/ana.png">
+                    <div class="layer">
+                        <h5>Amazon Sales Data Sentiment Analysis</h5>
+                        <a href="#"><i class='bx bx-bar-chart-square' style="color: aliceblue;"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="explore-more-container">
+                <a href="https://github.com/MrAdithya21?tab=repositories" class="explore-more-btn" target="_blank">
+                  <span>Explore More Projects</span>
+                </a>
+              </div>   
+        </div>
         
-                        <!-- MyEdMaster Experience -->
-                        <div>
-                            <i class='bx bx-code' style="color: #00eeff;"></i>
-                            <h2 style="color: #00eeff;">Intern at MyEdMaster</h2>
-                            <p>
-                                At MyEdMaster, I played a crucial role in developing and enhancing the SAT gaming platform. My primary task was to analyze user performance data across Math and English categories. I collected, processed, and cleaned the data using Pandas, ensuring its readiness for advanced analysis. This involved handling missing values, normalizing data, and preparing it for statistical methods that ensured reliability and accuracy. I created visualizations with Matplotlib and Seaborn, including histograms and pie charts, to uncover trends and patterns that informed project decisions.
-                                
-                                I also explored the application of machine learning models, such as logistic regression, to predict user performance and provide feedback for improvement. Additionally, I managed and queried large datasets using SQL, designing complex queries to extract relevant insights. My experience with MySQL and DBeaver enhanced my data engineering skills, particularly in managing and preprocessing large datasets.
-                                
-                                Beyond data analysis, I contributed to the development of a robust API layer that facilitated data retrieval and manipulation. This API was integral to the platform's functionality and my work in this area gave me a deeper understanding of how data science integrates with software development. As the project evolved, I gained experience in frontend development, designing analysis pages using Django and React. I also enhanced my web design skills using CSS and JavaScript, and contributed to designing webpages for a multiplayer gaming feature within the SAT platform using Unity.
-                            </p>
+    </div>
+</section>
+
+
+        <section id="Dashboards">
+            <h2>My <span>Dashboards</span></h2>            <div class="dashboard-container">
+              <div class="dashboard">
+                <a href="https://public.tableau.com/app/profile/adithya.singupati/viz/Globalhappinesstrends_17349090293570/Dashboard1" target="_blank">
+                  <img src="./img/dashboard1_thumbnail.png" alt="Happiness in Focus - Understanding Global Well-Being"> 
+                  <h3>Happiness in Focus - Understanding Global Well-Being</h3>
+                </a>
+              </div>
+              <div class="dashboard">
+                <a href="https://public.tableau.com/views/AgriculturalInsights/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank">
+                  <img src="./img/dashboard_2.png"alt="Dashboard 2 Thumbnail">
+                  <h3>Global Agricultural Insights: Crop Yields, Climate, and Resource Impacts
+                </h3>
+                </a>
+              </div>
+              <div class="dashboard">
+                <a href="https://public.tableau.com/views/Dssalaries_17323045394200/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"target="_blank">
+                  <img src="./img/Dashboard_3.png"alt="Dashboard 2 Thumbnail">
+                  <h3>From Roles to Regions: Breaking Down Data Science Salaries
+                </h3>
+                </a>
+              </div>
+              <div class="dashboard">
+                <a href="https://public.tableau.com/views/sleepanalysis_17337004921210/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"target="_blank">
+                  <img src="./img/Dashboard_4.png"alt="Dashboard 2 Thumbnail">
+                  <h3>Unlocking Sleep and Lifestyle Insights: A Comprehensive Dashboard
+                </h3>
+                </a>
+              </div>
+            </div> 
+            <div class="explore-more-container">
+                <a href="https://public.tableau.com/app/profile/adithya.singupati/vizze" 
+                   class="explore-more-btn" 
+                   target="_blank">
+                  <span>Explore More Dashboards</span>
+
+                </a>
+              </div>
+          </section>
+
+          <section id="Experience">
+            <div class="timeline-container">
+                <h2>My <span>Experience</span></h2>
+                <div class="timeline">
+                    <!-- TIH-IoT Chanakya Experience -->
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="bx bx-code"></i></div>
+                        <div class="timeline-content">
+                            <h3>Intern at TIH-IoT Chanakya (IIT Bombay)</h3>
+                            <h4>January 2022 - November 2022</h4>
+                            <div class="timeline-details">
+                                <p>During my internship at TIH-IoT Chanakya, IIT Bombay, I worked on developing innovative control systems to enhance accessibility for individuals with disabilities. Key contributions include:</p>
+                                <ul>
+                                    <li>Developed a speech control system using Arduino Uno microcontrollers and HC05 Bluetooth modules.</li>
+                                    <li>Contributed to the development of a mind-controlled wheelchair system using L293D motor drivers.</li>
+                                    <li>Enhanced programming skills and understanding of hardware integration and user-centric design.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- MyEdMaster Experience -->
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="bx bx-code"></i></div>
+                        <div class="timeline-content">
+                            <h3>Intern at MyEdMaster</h3>
+                            <h4>May 2024 - August 2024</h4>
+                            <div class="timeline-details">
+                                <p>At MyEdMaster, I contributed to the development and enhancement of the SAT gaming platform. Key achievements include:</p>
+                                <ul>
+                                    <li>Analyzed user performance data using Python and Pandas.</li>
+                                    <li>Implemented machine learning models for user performance prediction.</li>
+                                    <li>Designed and developed robust API layers and web pages using Django and React.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Research Assistant Experience -->
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="bx bx-code"></i></div>
+                        <div class="timeline-content">
+                            <h3>Research Assistant, Kelley School of Business</h3>
+                            <h4>December 2024 - Present</h4>
+                            <div class="timeline-details">
+                                <p>As a Research Assistant at the Kelley School of Business, I work on innovative projects at the intersection of AI and business. Key responsibilities include:</p>
+                                <ul>
+                                    <li>Developing advanced machine learning models for text analysis.</li>
+                                    <li>Applying NLP techniques for summarization and sentiment analysis.</li>
+                                    <li>Contributing to data preprocessing, feature engineering, and Generative AI solutions.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+                           
         
 
 
@@ -295,6 +406,8 @@
                 <div class="contact-icons">
                     <a href="https://github.com/MrAdithya21" target="_blank"><i class='bx bxl-github'></i></a>
                     <a href="https://www.linkedin.com/in/adithyasingupati" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                    <a href="https://public.tableau.com/app/profile/adithya.singupati/vizzes" target="_blank"> <i class='bx bx-bar-chart-square'></i></a>
+
                 </div>
             </div>
         </section>
